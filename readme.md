@@ -31,3 +31,9 @@ Check the live demo hosted by Github pages 😎
 ├── 📜 styles.css
 ├── 📜 script.js
 └── 📜 README.md
+```
+
+## Update
+I managed to create this page in 30 seconds, this stuff might be a game changer
+![image](https://github.com/user-attachments/assets/90736e43-2401-496b-95c4-a8d46495b29f)
+
