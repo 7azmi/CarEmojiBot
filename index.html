@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimum-scale=1">
+  <title>Emoji Car - RedZoom</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Include Telegram Web App SDK -->
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    /* CSS to disable scrolling, zooming, and text selection */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;  /* Disable scrolling */
+      -webkit-touch-callout: none; /* Prevent long press context menu on mobile */
+      -webkit-user-select: none; /* Disable text selection */
+      -moz-user-select: none;    /* Disable text selection in Firefox */
+      -ms-user-select: none;     /* Disable text selection in Internet Explorer/Edge */
+      user-select: none;         /* Disable text selection */
+    }
+    
+    /* Disable touch zooming */
+    body {
+      touch-action: none; /* Disable zooming and scrolling gestures */
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <!-- Car Emoji -->
+    <div class="emoji">
+      🚗
+    </div>
+    <h2 class="car-name">RedZoom</h2>
+    <p class="car-description">Compact, stylish, fast. <a href="#">Learn More &gt;</a></p>
+    <div class="addons">
+      <h3>ADD-ONS</h3>
+      <button class="add-more-btn" onclick="addAddon()">
+        ➕ Add More
+      </button>
+      <div class="addon-list" id="addon-list">
+        <div class="addon-item">
+          🛞
+          <p>Wheels <span class="subtitle">20-inch Sport wheels</span></p>
+        </div>
+        <div class="addon-item">
+          🔋
+          <p>Battery <span class="subtitle">82.3 kWh Sport Battery</span></p>
+        </div>
+      </div>
+      <button class="remove-all-btn" onclick="removeAll()">❌ Remove All</button>
+    </div>
+  </div>
+
+  <script>
+    // Ensure the Telegram Web App is ready
+    window.Telegram.WebApp.ready();
+
+    // Configure the MainButton
+    Telegram.WebApp.MainButton.setText("🚗 Start a Test Drive");
+    Telegram.WebApp.MainButton.setParams({
+      color: "#007aff", // Customize button color
+      text_color: "#ffffff" // Customize text color
+    });
+
+    // Show the MainButton
+    Telegram.WebApp.MainButton.show();
+
+    // Function to add more items dynamically to the addon list
+    function addAddon() {
+      const addonList = document.getElementById('addon-list');
+      
+      const newAddon = document.createElement('div');
+      newAddon.classList.add('addon-item');
+      
+      newAddon.innerHTML = `
+        🔋
+        <p>Battery <span class="subtitle">82.3 kWh Sport Battery</span></p>
+      `;
+      
+      addonList.appendChild(newAddon);
+    }
+
+    // Function to remove all items
+    function removeAll() {
+      const addonList = document.getElementById('addon-list');
+      addonList.innerHTML = '';  // Clear all addons
+    }
+  </script>
+</body>
+</html>
