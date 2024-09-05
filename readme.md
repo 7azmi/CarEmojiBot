@@ -11,7 +11,7 @@ I didn't bother implementing themes but it can easily be done. Check [ThemeParam
 
 ## Features
 - Pure **JS**, **CSS**, and **HTML** (no libraries)
-- **Native-like** experience (no zooming, scrolling, or text selection)
+- **Native-like** experience out of simplicity (no zooming, scrolling, or text selection)
 - **Telegram WebApp SDK** integration
 - Hosted on **GitHub Pages**
 
