@@ -1,4 +1,4 @@
-# 🚗 BlueZoom Car Emoji Mini App Design
+# 🚗 RedZoom Car Emoji Mini App Design
 
 ![BlueZoom Car Preview](./preview.png)
 
